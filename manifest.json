@@ -1,0 +1,28 @@
+{
+    "name": "gitlab commits code to picture",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "contentSettings",
+        "tabs"
+    ],
+    "action": {
+        "default_title": "Default Title",
+        "default_popup": "popups/popup.html",
+        "default_icon": {}
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://gitlab.com/*"
+            ],
+            "js": [
+                "libs/dom-to-image.min.js",
+                "content.js"
+            ]
+        }
+    ]
+}
