@@ -1,2 +1,2 @@
-# gitlab-commits-code-to-picture
-自动为gitlab commit的代码生成截图
+# gitlab-commits-to-picture-chrome-extension
+chrome扩展，自动为gitlab commit的代码生成截图
