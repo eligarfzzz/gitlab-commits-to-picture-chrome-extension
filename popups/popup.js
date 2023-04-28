@@ -22,13 +22,22 @@ async function getCurrentTab() {
 
 
 document.addEventListener('DOMContentLoaded', async function () {
+
     const tab = await getCurrentTab();
+
+    /**
+     * @type {HTMLButtonElement}
+     */
+    const btn = document.querySelector("#mainbutton");
     if (isLocationGitlabCommit(tab.url)) {
-        document.querySelector("#mainbutton").onclick = () => { sendSavePictures(tab) };
-        document.querySelector("#mainbutton").innerHTML = "click to save pictures";
+        btn.onclick = () => { sendSavePictures(tab) };
+        btn.innerHTML = "click to save pictures";
+        btn.disabled = false;
     } else {
-        document.querySelector("#mainbutton").onclick = null;
-        document.querySelector("#mainbutton").innerHTML = "this is not gitlab";
+        btn.onclick = null;
+        btn.innerHTML = "this site is not a gitlab commit😅";
+        btn.disabled = true;
     }
+    
 });
 

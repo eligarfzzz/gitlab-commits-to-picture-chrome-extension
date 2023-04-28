@@ -9,7 +9,7 @@ function savePictures() {
             });
     })
     
-    alert("wait for downloading...")
+    alert("downloading... wait for a few seconds please")
 }
 
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
