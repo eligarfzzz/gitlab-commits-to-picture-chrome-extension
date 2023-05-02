@@ -8,7 +8,6 @@ function isLocationGitlabCommit(url) {
     //     return false;
     // }
     const reg = /^https:\/\/gitlab.com(\/.+)+\/-\/commit\/([a-zA-Z0-9\.])+$/;
-    console.log(reg.test(url.split('?').pop()), url.split('?').shift())
     return reg.test(url.split('?').shift());
 }
 
