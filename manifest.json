@@ -20,7 +20,7 @@
                 "*://gitlab.com/*"
             ],
             "js": [
-                "libs/dom-to-image.min.js",
+                "libs/html-to-image.min.js",
                 "content.js"
             ]
         }
