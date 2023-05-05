@@ -1,0 +1,43 @@
+button {
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor:pointer;
+    margin: 16px;
+    box-shadow: 0 5px 16px -5px rgba(0, 0, 0, 0.1);
+    transition: 300ms ease-in-out;
+    border: none;
+    background: white;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  button::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background: rgb(43, 133, 1);
+    transition: 300ms ease-in-out;
+    transform-origin: 0px 0px;
+    top: -500%;
+    left: 0%;
+    width: 200%;
+    height: 420%;
+    z-index: -1;
+  }
+  button:enabled:hover::before{
+    transform: rotate(45deg);
+  }
+  button:enabled{
+    border: 4px solid rgb(43, 133, 1);
+    color: rgb(43, 133, 1);
+  }
+  button:enabled:hover{
+    color: white;
+  }
+  button:disabled{
+    cursor:not-allowed;
+    border: 4px solid rgb(239, 151, 151);
+    color: rgb(237, 117, 117);
+  }
