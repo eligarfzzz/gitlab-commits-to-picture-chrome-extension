@@ -26,9 +26,9 @@
         }
     ],
     "icons": {
-        "16": "ic16.png",
-        "32": "ic32.png",
-        "48": "ic48.png",
-        "128": "ic128.png"
+        "16": "icons/ic16.png",
+        "32": "icons/ic32.png",
+        "48": "icons/ic48.png",
+        "128": "icons/ic128.png"
       }
 }
